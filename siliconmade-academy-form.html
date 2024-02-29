@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 19px;
+      }
+      .main {
+        display: flex;
+        flex-direction: row;
+      }
+      .leftSide {
+        flex: 1;
+
+        line-height: 22px;
+      }
+      .rightSide {
+        flex: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kişiye Özel Tişört Sipariş Aracı</h1>
+    <hr />
+    <text
+      >Lütfen oluşturmak istediğiniz siparişe ilişkin aşağıdaki bilgileri
+      doldurunuz;</text
+    >
+    <br />
+    <h2>Kişisel Bilgiler</h2>
+    <div class="main">
+      <div class="leftSide">
+        <text>Adınız :</text> <br />
+        <text>Soyadınız :</text> <br />
+        <text>Doğum Tarihiniz :</text> <br />
+        <text>Mail Adresiniz :</text> <br />
+        <text>Telefon :</text>
+      </div>
+      <div class="rightSide">
+        <input type="text" /> <br />
+        <input type="text" /> <br />
+        <input type="text" /> <br />
+        <input type="text" /> <br />
+        <input type="text" /> <br />
+      </div>
+    </div>
+    <br />
+    <hr />
+
+    <h2>Sipariş Bilgileri</h2>
+    <div class="main">
+      <div class="leftSide">
+        <text>T-Shirt Rengi :</text> <br />
+        <text>Yazı Rengi :</text> <br />
+        <text>Tişört Üzerinde Yazacak Yazıyı Yazın :</text> <br />
+        <text>Tişört Adedi :</text> <br />
+      </div>
+      <div class="rightSide" style="flex: 5">
+        <input type="text" /> <br />
+        <input type="text" /> <br />
+        <input type="text" /> <br />
+        <input type="text" /> <br />
+      </div>
+    </div>
+    <text>Beden Seçiniz :</text> <input type="range" /><br />
+    <input type="submit" value="Seç" /><input
+      type="text"
+      readonly
+      style="margin-left: 3px"
+    />
+    <br /><br />
+    <h2>Teslimat Bilgileri</h2>
+    <br />
+    <div class="main">
+      <div class="leftSide">
+        <text>Adres :</text> <br />
+        <text>Teslim tarihi için bir aralık seçiniz:</text> <br />
+      </div>
+      <div class="rightSide" style="flex: 5">
+        <textarea name="" id="" rows="1" cols="40"></textarea>
+        <br />
+        <input type="text" /> <br />
+      </div>
+    </div>
+  </body>
+</html>
