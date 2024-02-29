@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        margin-bottom: 3px;
+      }
       body {
         font-size: 19px;
       }
@@ -12,6 +15,7 @@
         display: flex;
         flex-direction: row;
       }
+
       .leftSide {
         flex: 1;
 
@@ -20,70 +24,115 @@
       .rightSide {
         flex: 10;
       }
+
+      textarea {
+        resize: none;
+        white-space: nowrap;
+        scrollbar-width: none;
+      }
+      #onayla {
+        height: 30px;
+        width:90px;
+        font-size: large;
+      }
     </style>
   </head>
   <body>
-    <h1>Kişiye Özel Tişört Sipariş Aracı</h1>
-    <hr />
-    <text
-      >Lütfen oluşturmak istediğiniz siparişe ilişkin aşağıdaki bilgileri
-      doldurunuz;</text
-    >
-    <br />
-    <h2>Kişisel Bilgiler</h2>
-    <div class="main">
-      <div class="leftSide">
-        <text>Adınız :</text> <br />
-        <text>Soyadınız :</text> <br />
-        <text>Doğum Tarihiniz :</text> <br />
-        <text>Mail Adresiniz :</text> <br />
-        <text>Telefon :</text>
+    <input action="">
+      <h1>Kişiye Özel Tişört Sipariş Aracı</h1>
+      <hr />
+      <br />
+      <label
+        >Lütfen oluşturmak istediğiniz siparişe ilişkin aşağıdaki bilgileri
+        doldurunuz;</label
+      >
+      <br />
+      <h2>Kişisel Bilgiler</h2>
+      <br />
+      <div class="main">
+        <div class="leftSide">
+          <label>Adınız :</label> <br />
+          <label>Soyadınız :</label> <br />
+          <label>Doğum Tarihiniz :</label> <br />
+          <label>Mail Adresiniz :</label> <br />
+          <label>Telefon :</label>
+        </div>
+        <div class="rightSide">
+          <input type="label" /> <br />
+          <input type="label" /> <br />
+          <input type="label" /> <br />
+          <input type="label" /> <br />
+          <input type="label" /> <br />
+        </div>
       </div>
-      <div class="rightSide">
-        <input type="text" /> <br />
-        <input type="text" /> <br />
-        <input type="text" /> <br />
-        <input type="text" /> <br />
-        <input type="text" /> <br />
-      </div>
-    </div>
-    <br />
-    <hr />
+      <br />
+      <hr />
 
-    <h2>Sipariş Bilgileri</h2>
-    <div class="main">
-      <div class="leftSide">
-        <text>T-Shirt Rengi :</text> <br />
-        <text>Yazı Rengi :</text> <br />
-        <text>Tişört Üzerinde Yazacak Yazıyı Yazın :</text> <br />
-        <text>Tişört Adedi :</text> <br />
+      <h2>Sipariş Bilgileri</h2>
+      <br />
+      <div class="main">
+        <div class="leftSide">
+          <label>T-Shirt Rengi :</label> <br />
+          <label>Yazı Rengi :</label> <br />
+          <label>Tişört Üzerinde Yazacak Yazıyı Yazın :</label> <br />
+          <label>Tişört Adedi :</label> <br />
+        </div>
+        <div class="rightSide" style="flex: 5">
+          <input type="label" /> <br />
+          <input type="label" /> <br />
+          <input type="label" /> <br />
+          <input type="label" /> <br />
+        </div>
       </div>
-      <div class="rightSide" style="flex: 5">
-        <input type="text" /> <br />
-        <input type="text" /> <br />
-        <input type="text" /> <br />
-        <input type="text" /> <br />
+      <label>Beden Seçiniz :</label> <input type="range" /><br />
+      <input type="submit" value="Seç" /><input
+        type="label"
+        readonly
+        style="margin-left: 3px"
+      />
+      <br /><br />
+      <h2>Teslimat Bilgileri</h2>
+      <br />
+      <div class="main">
+        <div class="leftSide" style="line-height: 27px">
+          <label>Adres :</label> <br />
+          <label>Teslim tarihi için bir aralık seçiniz:</label> <br />
+        </div>
+        <div class="rightSide" style="flex: 5">
+          <textarea name="" id="" rows="1" cols="30"></textarea>
+          <br />
+          <input type="week" /> <br />
+        </div>
       </div>
-    </div>
-    <text>Beden Seçiniz :</text> <input type="range" /><br />
-    <input type="submit" value="Seç" /><input
-      type="text"
-      readonly
-      style="margin-left: 3px"
-    />
-    <br /><br />
-    <h2>Teslimat Bilgileri</h2>
-    <br />
-    <div class="main">
-      <div class="leftSide">
-        <text>Adres :</text> <br />
-        <text>Teslim tarihi için bir aralık seçiniz:</text> <br />
+      <br />
+      <hr />
+      <h2>Ödeme Bilgileri</h2>
+      <br /><br />
+      <div class="main">
+        <div class="leftSide">
+          <label>Ad - Soyad :</label> <br />
+          <label>Kart Numarası :</label> <br />
+          <label>Son Kullanma Tarihi :</label> <br />
+          <label>CVV :</label> <br />
+        </div>
+        <div class="rightSide" style="flex: 9">
+          <input type="label" /> <br />
+          <input
+            id="ccn"
+            type="tel"
+            inputmode="numeric"
+            autocomplete="cc-number"
+            maxlength="19"
+            placeholder="XXXX-XXXX-XXXX-XXXX"
+            required
+          />
+          <br />
+          <input type="week" /> <br />
+          <input type="label" /> <br />
+        </div>
       </div>
-      <div class="rightSide" style="flex: 5">
-        <textarea name="" id="" rows="1" cols="40"></textarea>
-        <br />
-        <input type="text" /> <br />
-      </div>
-    </div>
+      <br />
+      <input type="submit"  name="" id="onayla" value="Onayla"></form>
+    </form>
   </body>
 </html>
