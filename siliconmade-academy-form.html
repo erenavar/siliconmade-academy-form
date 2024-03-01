@@ -8,131 +8,109 @@
       * {
         margin-bottom: 3px;
       }
-      body {
-        font-size: 19px;
-      }
       .main {
         display: flex;
         flex-direction: row;
       }
-
       .leftSide {
-        flex: 1;
-
         line-height: 22px;
       }
       .rightSide {
-        flex: 10;
-      }
-
-      textarea {
-        resize: none;
-        white-space: nowrap;
-        scrollbar-width: none;
-      }
-      #onayla {
-        height: 30px;
-        width:90px;
-        font-size: large;
+        margin-left: 2px;
       }
     </style>
   </head>
   <body>
-    <input action="">
+    <form action="">
       <h1>Kişiye Özel Tişört Sipariş Aracı</h1>
       <hr />
-      <br />
-      <label
+      <text
         >Lütfen oluşturmak istediğiniz siparişe ilişkin aşağıdaki bilgileri
-        doldurunuz;</label
+        doldurunuz:</text
       >
       <br />
       <h2>Kişisel Bilgiler</h2>
-      <br />
+
       <div class="main">
         <div class="leftSide">
-          <label>Adınız :</label> <br />
-          <label>Soyadınız :</label> <br />
-          <label>Doğum Tarihiniz :</label> <br />
-          <label>Mail Adresiniz :</label> <br />
-          <label>Telefon :</label>
+          <label for="ad">Adınız :</label> <br />
+          <label for="soyad">Soyadınız :</label><br />
+          <label for="dogum">Doğum Tarihiniz : </label><br />
+          <label for="mail">Mail Adresiniz :</label><br />
+          <label for="telefon">Telefon :</label><br />
         </div>
         <div class="rightSide">
-          <input type="label" /> <br />
-          <input type="label" /> <br />
-          <input type="label" /> <br />
-          <input type="label" /> <br />
-          <input type="label" /> <br />
+          <input type="text" id="ad" /> <br />
+          <input type="text" /><br />
+          <input type="date" /><br />
+          <input type="text" /><br />
+          <input type="text" /><br />
         </div>
       </div>
-      <br />
       <hr />
-
-      <h2>Sipariş Bilgileri</h2>
+      <h2>Sipariş bilgileri</h2>
       <br />
       <div class="main">
         <div class="leftSide">
-          <label>T-Shirt Rengi :</label> <br />
-          <label>Yazı Rengi :</label> <br />
-          <label>Tişört Üzerinde Yazacak Yazıyı Yazın :</label> <br />
-          <label>Tişört Adedi :</label> <br />
+          <label for="ad">Tişört Rengi :</label> <br />
+          <label for="soyad">Yazı Rengi :</label><br />
+          <label for="dogum">Tişört Üzerinde yazacak yazıyı girin : </label
+          ><br />
+          <label for="mail">Tişört Adedi :</label><br />
         </div>
-        <div class="rightSide" style="flex: 5">
-          <input type="label" /> <br />
-          <input type="label" /> <br />
-          <input type="label" /> <br />
-          <input type="label" /> <br />
+        <div class="rightSide">
+          <input type="color" id="ad" style="height: 23px" /> <br />
+          <input type="color" style="height: 23px" /><br />
+          <input type="text" /><br />
+          <input type="text" /><br />
         </div>
       </div>
-      <label>Beden Seçiniz :</label> <input type="range" /><br />
-      <input type="submit" value="Seç" /><input
-        type="label"
-        readonly
-        style="margin-left: 3px"
-      />
-      <br /><br />
+      <div style="display: flex">
+        <label for="telefon">Beden Seçiniz :</label><br />
+        <input type="range" /><br />
+      </div>
+      <button>Seç</button> <input type="text" readonly />
+      <hr />
       <h2>Teslimat Bilgileri</h2>
       <br />
       <div class="main">
-        <div class="leftSide" style="line-height: 27px">
-          <label>Adres :</label> <br />
-          <label>Teslim tarihi için bir aralık seçiniz:</label> <br />
+        <div class="leftSide">
+          <label for="ad">Adres :</label> <br />
+          <label for="soyad">Teslim tarihi için bir tarih seçiniz :</label
+          ><br />
         </div>
-        <div class="rightSide" style="flex: 5">
-          <textarea name="" id="" rows="1" cols="30"></textarea>
-          <br />
-          <input type="week" /> <br />
+        <div class="rightSide">
+          <input type="text" id="ad" /> <br />
+          <input type="date" /><br />
         </div>
       </div>
-      <br />
       <hr />
       <h2>Ödeme Bilgileri</h2>
-      <br /><br />
+      <br />
       <div class="main">
-        <div class="leftSide">
-          <label>Ad - Soyad :</label> <br />
-          <label>Kart Numarası :</label> <br />
-          <label>Son Kullanma Tarihi :</label> <br />
-          <label>CVV :</label> <br />
+        <div class="leftSide" style="line-height: 24px">
+          <label for="ad">Tişört Rengi :</label> <br />
+          <label for="soyad">Yazı Rengi :</label><br />
+          <label for="dogum">Tişört Üzerinde yazacak yazıyı girin : </label
+          ><br />
+          <label for="mail">CVV : </label><br />
         </div>
-        <div class="rightSide" style="flex: 9">
-          <input type="label" /> <br />
+        <div class="rightSide">
+          <input type="text" id="ad" /> <br />
           <input
             id="ccn"
             type="tel"
             inputmode="numeric"
             autocomplete="cc-number"
             maxlength="19"
-            placeholder="XXXX-XXXX-XXXX-XXXX"
+            placeholder="xxxx xxxx xxxx xxxx"
             required
-          />
-          <br />
-          <input type="week" /> <br />
-          <input type="label" /> <br />
+          /><br />
+          <input type="DATE" /><br />
+          <input type="text" /><br />
         </div>
       </div>
-      <br />
-      <input type="submit"  name="" id="onayla" value="Onayla"></form>
+      <input type="submit" id="onayla" value="Onayla" />
     </form>
   </body>
 </html>
